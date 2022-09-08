@@ -1,14 +1,11 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-#include <stdio.h>
 #include <stdlib.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <string.h>
-#include <ctype.h>
 #include <stddef.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdio.h>
 
 extern char **argv;
 
@@ -27,6 +24,7 @@ typedef struct stack_s
 	struct stack_s *prev;
 	struct stack_s *next;
 } stack_t;
+
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -58,10 +56,7 @@ void popHandler(stack_t **stack, unsigned int line_number);
 void swapHandler(stack_t **stack, unsigned int line_number);
 void addHandler(stack_t **stack, unsigned int line_number);
 void nopHandler(stack_t **stack, unsigned int line_number);
-void f_pstr(stack_t **head, unsigned int counter);
-void f_rotl(stack_t **head, unsigned int counter);
-void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
-void f_sub(stack_t **head, unsigned int counter);
+
 int is_number(char *s);
 char *itoa(int n);
 
