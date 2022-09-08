@@ -1,11 +1,14 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-#include <stdlib.h>
-#include <stddef.h>
-#include <unistd.h>
-#include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <string.h>
+#include <ctype.h>
+#include <stddef.h>
 
 extern char **argv;
 
@@ -56,6 +59,7 @@ void popHandler(stack_t **stack, unsigned int line_number);
 void swapHandler(stack_t **stack, unsigned int line_number);
 void addHandler(stack_t **stack, unsigned int line_number);
 void nopHandler(stack_t **stack, unsigned int line_number);
+void f_pstr(stack_t **head, unsigned int counter);
 
 int is_number(char *s);
 char *itoa(int n);
