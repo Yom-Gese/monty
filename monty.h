@@ -75,7 +75,8 @@ void swapHandler(stack_t **stack, unsigned int line_number);
 void addHandler(stack_t **stack, unsigned int line_number);
 void nopHandler(stack_t **stack, unsigned int line_number);
 void f_pstr(stack_t **head, unsigned int counter);
-
+void f_rotl(stack_t **head, unsigned int counter);
+void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
 int is_number(char *s);
 char *itoa(int n);
 
