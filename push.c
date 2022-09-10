@@ -47,4 +47,4 @@ void _push(stack_t **stack, unsigned int num_line)
 		free_l(stack);
 		exit(EXIT_FAILURE);
 	}
-i}
+}
