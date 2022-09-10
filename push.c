@@ -43,9 +43,8 @@ void _push(stack_t **stack, unsigned int num_line)
 	else
 	{
 		free(global.line), fclose(global.fil);
-		vprintf(2, "L%u: usage: push integer\n", num_line);
+		dprintf(2, "L%u: usage: push integer\n", num_line);
 		free_l(stack);
 		exit(EXIT_FAILURE);
 	}
-i:
-}
+i}
